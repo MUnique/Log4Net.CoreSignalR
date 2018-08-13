@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/MUnique/Log4Net.CoreSignalR.svg?branch=master)](https://travis-ci.org/MUnique/Log4Net.CoreSignalR)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9829a38e25c34e72a343070099d3d6b3)](https://www.codacy.com/app/sven-n/Log4Net.CoreSignalR?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MUnique/Log4Net.CoreSignalR&amp;utm_campaign=Badge_Grade)
 
 **MUnique.Log4Net.CoreSignalR** provides a [Log4Net Appender](http://logging.apache.org/log4net/release/manual/introduction.html#appenders) 
 which forwards Log4Net log events to a [SignalR](https://github.com/aspnet/SignalR) hub, which is also provided as [LogHub](src/LogHub.cs).
