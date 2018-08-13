@@ -36,7 +36,7 @@ namespace MUnique.Log4Net.CoreSignalR
         /// <returns>The task.</returns>
         public async Task Subscribe()
         {
-            await this.Subscribe(DefaultGroup);
+            await this.Subscribe(DefaultGroup).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace MUnique.Log4Net.CoreSignalR
         /// </returns>
         public async Task Subscribe(string groupName)
         {
-            await this.Subscribe(groupName, 0);
+            await this.Subscribe(groupName, 0).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace MUnique.Log4Net.CoreSignalR
         /// Unsubscribes from the log entries of this hub by removing the connected client from the default group.
         /// </summary>
         /// <returns>The task.</returns>
-        public async Task Unsubscribe() => await this.Unsubscribe(DefaultGroup);
+        public async Task Unsubscribe() => await this.Unsubscribe(DefaultGroup).ConfigureAwait(false);
 
         /// <summary>
         /// Called when a log entry got logged by the <see cref="SignalrAppender"/>.
@@ -107,7 +107,7 @@ namespace MUnique.Log4Net.CoreSignalR
         /// <returns>The task.</returns>
         public async Task OnMessageLogged(LogEntry logEntry)
         {
-            await this.OnMessageLogged(logEntry, DefaultGroup);
+            await this.OnMessageLogged(logEntry, DefaultGroup).ConfigureAwait(false);
         }
 
         /// <summary>
