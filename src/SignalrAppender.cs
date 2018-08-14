@@ -48,7 +48,7 @@ namespace MUnique.Log4Net.CoreSignalR
             var id = Interlocked.Increment(ref this.currentId);
             var logEntry = new LogEntry(id, formattedEvent, loggingEvent.CopyData());
 
-            this.SendLogEntry(logEntry);
+            this.SendLogEntry(logEntry).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -62,7 +62,7 @@ namespace MUnique.Log4Net.CoreSignalR
             }
         }
 
-        private void EnsureConnection()
+        private async Task ConnectIfRequired()
         {
             if (this.hubConnection == null)
             {
@@ -73,10 +73,19 @@ namespace MUnique.Log4Net.CoreSignalR
 
                 this.hubConnection = new HubConnectionBuilder().WithUrl(this.HubUrl).Build();
                 this.hubConnection.Closed += this.HubConnectionClosed;
-                this.hubConnection
+                await this.hubConnection
                     .StartAsync()
-                    .ContinueWith(task => this.connectionState = ConnectionState.Open)
-                    .Wait();
+                    .ContinueWith(task =>
+                    {
+                        if (task.IsFaulted)
+                        {
+                            this.hubConnection = null;
+                        }
+                        else if (task.IsCompleted)
+                        {
+                            this.connectionState = ConnectionState.Open;
+                        }
+                    });
             }
         }
 
@@ -87,14 +96,14 @@ namespace MUnique.Log4Net.CoreSignalR
             return Task.CompletedTask;
         }
 
-        private void SendLogEntry(LogEntry entry)
+        private async Task SendLogEntry(LogEntry entry)
         {
             try
             {
-                this.EnsureConnection();
+                await this.ConnectIfRequired();
                 if (this.hubConnection != null && this.connectionState == ConnectionState.Open)
                 {
-                    this.hubConnection.SendAsync(nameof(LogHub.OnMessageLogged), entry, this.GroupName);
+                    await this.hubConnection.SendAsync(nameof(LogHub.OnMessageLogged), entry, this.GroupName);
                 }
             }
             catch (Exception e)
