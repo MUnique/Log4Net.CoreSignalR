@@ -1,38 +1,37 @@
-﻿// ReSharper disable InconsistentNaming naming is caused by C# classes which are serialized like that.
-/*
+﻿/*
  * This file contains TypeScript definitions which can be helpful at client-side development.
  */
 
 export interface LogEventData {
-    readonly Domain: string;
-    readonly ExceptionString: string;
-    readonly Identity: string;
-    readonly Level: LogLevel;
-    readonly LogLocation: LogLocation;
-    readonly LoggerName: string;
-    readonly Message: string;
-    readonly Properties: { [key: string]: string };
-    readonly ThreadName: string;
-    readonly TimeStamp: string;
-    readonly UserName: string;
+    readonly domain: string;
+    readonly exceptionString: string;
+    readonly identity: string;
+    readonly level: LogLevel;
+    readonly logLocation: LogLocation;
+    readonly loggerName: string;
+    readonly message: string;
+    readonly properties: { [key: string]: string };
+    readonly threadName: string;
+    readonly timeStamp: string;
+    readonly userName: string;
 }
 
 export interface LogLevel {
-    readonly Name: string;
-    readonly DisplayName: string;
-    readonly Value: number;
+    readonly name: string;
+    readonly displayName: string;
+    readonly value: number;
 }
 
 export interface LogLocation {
-    readonly MethodName: string;
-    readonly ClassName: string;
-    readonly FileName: string;
-    readonly LineNumber: number;
-    readonly FullInfo: string;
+    readonly methodName: string;
+    readonly className: string;
+    readonly fileName: string;
+    readonly lineNumber: number;
+    readonly fullInfo: string;
 }
 
 export interface LogEventArgs {
-    FormattedEvent: string;
-    LoggingEvent: LogEventData;
-    Id: number;
+    formattedEvent: string;
+    loggingEvent: LogEventData;
+    id: number;
 }
