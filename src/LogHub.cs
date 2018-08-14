@@ -101,11 +101,11 @@ namespace MUnique.Log4Net.CoreSignalR
         public async Task UnsubscribeFromDefaultGroup() => await this.UnsubscribeFromGroup(DefaultGroup).ConfigureAwait(false);
 
         /// <summary>
-        /// Called when a log entry got logged by the <see cref="SignalrAppender"/>.
+        /// Called when a log entry got logged by the <see cref="SignalrAppender"/> for the default group.
         /// </summary>
         /// <param name="logEntry">The log entry.</param>
         /// <returns>The task.</returns>
-        public async Task OnMessageLogged(LogEntry logEntry)
+        public async Task OnMessageLoggedForDefaultGroup(LogEntry logEntry)
         {
             await this.OnMessageLogged(logEntry, DefaultGroup).ConfigureAwait(false);
         }
