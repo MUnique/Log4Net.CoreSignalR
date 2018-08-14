@@ -96,7 +96,7 @@ connection.on("OnLoggedEvent", function (formattedEvent, loggedEvent, id) {
 });
 
 connection.start()
-    .then(() => connection.send("Subscribe"))
+    .then(() => connection.send("SubscribeToDefaultGroup"))
     .catch(error => console.error(error.toString()));
 ```
 
@@ -135,7 +135,7 @@ To subscribe for log events of this group, we have to specify the group accordin
 
 ```javascript
 connection.start()
-    .then(() => connection.send("Subscribe", "MyGroup"))
+    .then(() => connection.send("SubscribeToGroup", "MyGroup"))
     .catch(error => console.error(error.toString()));
 ```
 

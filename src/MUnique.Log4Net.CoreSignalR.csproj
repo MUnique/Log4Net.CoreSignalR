@@ -7,12 +7,12 @@
     <PackageId>munique.log4net.coresignalr</PackageId>
     <Authors>sven-n</Authors>
     <PackageLicenseUrl>http://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
-    <PackageProjectUrl>https://munique.net</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/MUnique/Log4Net.CoreSignalR</PackageProjectUrl>
     <PackageTags>log4net signalr</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>beta</VersionSuffix>
-    <Version>1.0.0-beta1</Version>
+    <VersionSuffix>beta2</VersionSuffix>
+    <Version>1.0.0-beta2</Version>
     <Company>MUnique</Company>
     <Description>MUnique.Log4Net.CoreSignalR provides a Log4Net Appender which forwards Log4Net log events to a SignalR hub, which is also provided by this package.
 The main use case for MUnique.Log4Net.CoreSignalR is building a log viewer on your website that gives easy visibility to diagnostic information and errors logged on the server.</Description>
