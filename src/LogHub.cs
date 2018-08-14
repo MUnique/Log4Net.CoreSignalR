@@ -14,7 +14,7 @@ namespace MUnique.Log4Net.CoreSignalR
     /// <summary>
     /// The SignalR hub which forwards logged messages to connected and subscribing clients.
     /// </summary>
-    public abstract class LogHub : Hub<ILogHubClient>
+    public class LogHub : Hub<ILogHubClient>
     {
         /// <summary>
         /// The default group name.
