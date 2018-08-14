@@ -24,6 +24,13 @@ namespace MUnique.Log4Net.CoreSignalR
         /// <summary>
         /// Initializes a new instance of the <see cref="LogLevel"/> class.
         /// </summary>
+        public LogLevel()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LogLevel"/> class.
+        /// </summary>
         /// <param name="level">The level.</param>
         protected LogLevel(Level level)
         {
