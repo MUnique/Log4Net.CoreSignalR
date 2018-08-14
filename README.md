@@ -32,7 +32,7 @@ Configure MUnique.Log4Net.CoreSignalR as a Log4Net appender by adding this to yo
 ```xml
 <log4net debug="true">
     <appender name="SignalrAppender" type="MUnique.Log4Net.CoreSignalR.SignalrAppender, MUnique.Log4Net.CoreSignalR">
-        <HubUrl>http://localhost/signalr/hubs/logHub/</HubUrl>
+        <HubUrl>http://localhost/signalr/hubs/logHub</HubUrl>
         <layout type="log4net.Layout.PatternLayout">
             <conversionPattern value="%date %-5level - %message%newline" />
         </layout>
@@ -87,7 +87,7 @@ Once the SignalrAppender is set up, all events logged on the server using Log4Ne
 Here we're handling log events of level 'ERROR':
 
 ```javascript
-let connection = new signalR.HubConnectionBuilder().withUrl("/signalr/hubs/logHub").build();
+let connection = new signalR.HubConnectionBuilder().withUrl("signalr/hubs/logHub").build();
 
 connection.on("OnLoggedEvent", function (formattedEvent, loggedEvent, id) {
     if (loggedEvent.Level.Name === "ERROR") {
