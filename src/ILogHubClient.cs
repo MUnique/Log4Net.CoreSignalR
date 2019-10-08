@@ -26,7 +26,7 @@ namespace MUnique.Log4Net.CoreSignalR
         /// </summary>
         /// <param name="loggers">The loggers.</param>
         /// <param name="cachedEntries">The cached entries.</param>
-        /// <returns>The task</returns>
+        /// <returns>The task.</returns>
         Task Initialize(IList<string> loggers, IList<LogEntry> cachedEntries);
     }
 }
