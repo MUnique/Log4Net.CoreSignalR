@@ -15,11 +15,11 @@ namespace MUnique.Log4Net.CoreSignalR
         /// Copies the data of the logging event into a new object.
         /// </summary>
         /// <param name="loggingEvent">The logging event.</param>
-        /// <returns>The copied data</returns>
+        /// <returns>The copied data.</returns>
         /// <remarks>
         /// We must "fix" volatile data before we can access it. Some properties are more expensive to fix than others.
         /// For performance reasons, we just set the fix flags LocationInfo and UserName, if really required. See also:
-        /// http://www.codewrecks.com/blog/index.php/2015/03/27/bufferingappenderskeleton-performance-problem-in-log4net/
+        /// http://www.codewrecks.com/blog/index.php/2015/03/27/bufferingappenderskeleton-performance-problem-in-log4net/ .
         /// </remarks>
         public static LogEventData CopyData(this LoggingEvent loggingEvent)
         {
