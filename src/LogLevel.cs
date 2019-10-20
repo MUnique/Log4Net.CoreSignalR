@@ -40,19 +40,19 @@ namespace MUnique.Log4Net.CoreSignalR
         }
 
         /// <summary>
-        /// Gets the display name of the log level.
+        /// Gets or sets the display name of the log level.
         /// </summary>
-        public string DisplayName { get; }
+        public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets the name of the log level.
+        /// Gets or sets the name of the log level.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets the numerical value of the log level.
+        /// Gets or sets the numerical value of the log level.
         /// </summary>
-        public int Value { get; }
+        public int Value { get; set; }
 
         /// <summary>
         /// Gets the instance of <see cref="LogLevel"/> of the specified <see cref="Level"/>.
