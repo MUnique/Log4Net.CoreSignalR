@@ -12,6 +12,13 @@ namespace MUnique.Log4Net.CoreSignalR
         /// <summary>
         /// Initializes a new instance of the <see cref="LogEntry"/> class.
         /// </summary>
+        public LogEntry()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LogEntry"/> class.
+        /// </summary>
         /// <param name="id">The unique identifier which is a sequence number.</param>
         /// <param name="formattedEvent">The formtted event as configured in the settings.</param>
         /// <param name="loggingEvent">The logging event data.</param>
