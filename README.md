@@ -11,8 +11,8 @@ From this hub it gets forwarded to its registered SignalR clients, e.g. to a Jav
 
 The main use case for MUnique.Log4Net.CoreSignalR is building a log viewer on your website that gives easy visibility to diagnostic information and errors logged on the server.
 
-## .NET Standard / Core
-This project uses the new [SignalR](https://github.com/aspnet/SignalR) library for .NET Standard/Core. It requires .NET Standard 2.0, because SignalR requires it as well.
+## .NET 5
+This project uses the new [SignalR](https://github.com/aspnet/SignalR) library for .NET 5.
 You can find a similar project for the regular version of the .net framework [here](https://github.com/MUnique/log4net.SignalR).
 
 ## Getting started
