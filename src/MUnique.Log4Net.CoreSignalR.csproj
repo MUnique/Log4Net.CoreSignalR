@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net50</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <PackageId>munique.log4net.coresignalr</PackageId>
@@ -10,9 +10,7 @@
     <PackageProjectUrl>https://github.com/MUnique/Log4Net.CoreSignalR</PackageProjectUrl>
     <PackageTags>log4net signalr dotnetcore netstandard</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>beta6</VersionSuffix>
-    <Version>1.0.0-beta6</Version>
+    <Version>1.0.1</Version>
     <Company>MUnique</Company>
     <Description>MUnique.Log4Net.CoreSignalR provides a Log4Net Appender which forwards Log4Net log events to a SignalR hub, which is also provided by this package.
 The main use case for MUnique.Log4Net.CoreSignalR is building a log viewer on your website that gives easy visibility to diagnostic information and errors logged on the server.</Description>
@@ -36,9 +34,9 @@ The main use case for MUnique.Log4Net.CoreSignalR is building a log viewer on yo
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="log4net" Version="2.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.3" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
