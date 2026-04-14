@@ -34,7 +34,7 @@ The main use case for MUnique.Log4Net.CoreSignalR is building a log viewer on yo
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="log4net" Version="3.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.3" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
